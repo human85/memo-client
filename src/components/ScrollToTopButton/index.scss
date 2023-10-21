@@ -1,0 +1,21 @@
+.scroll-to-top {
+  opacity: 0.8;
+  position: fixed;
+  right: 15px;
+  bottom: 110px;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: orange;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &.visible {
+    opacity: 0.8;
+  }
+
+  svg {
+    translate: -5% 0;
+  }
+}
