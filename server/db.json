@@ -29,32 +29,17 @@
     {
       "id": 1,
       "title": "吃饭",
-      "completed": true
+      "completed": false
     },
     {
       "title": "打豆豆",
       "id": 3,
-      "completed": true
+      "completed": false
     },
     {
       "title": "游泳",
       "completed": false,
       "id": 4
-    },
-    {
-      "title": "睡大",
-      "completed": false,
-      "id": 5
-    },
-    {
-      "title": "",
-      "completed": false,
-      "id": 6
-    },
-    {
-      "title": "",
-      "completed": false,
-      "id": 7
     }
   ]
 }
