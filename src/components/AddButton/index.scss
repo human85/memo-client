@@ -1,0 +1,15 @@
+.add {
+  opacity: 0.8;
+  position: fixed;
+  right: 15px;
+  bottom: 60px;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: orange;
+
+  svg {
+    translate: -5% 0;
+  }
+}
