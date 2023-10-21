@@ -33,24 +33,20 @@ export function Component() {
     getMemoById()
 
     return () => (ignore = true)
-  }, [])
+  }, [id])
 
   // 修改或新增 memo
   async function saveChanges() {
-    try {
-      await patchOrPostMemoApi(id, { title, content, date: new Date() })
-      Toast.show({
-        content: '保存成功',
-        duration: 1000
-      })
-      setTips('已保存 ✅')
-    } catch (error) {
-      Toast.show({
-        content: '保存失败',
-        duration: 1000
-      })
-    }
+    await patchOrPostMemoApi(id, { title, content, date: new Date() })
+    Toast.show({
+      content: '保存成功',
+      duration: 1000
+    })
+    setTips('已保存 ✅')
   }
+
+  // 防止页面闪烁
+  if (id && (!title || !content)) return <></>
 
   return (
     <>

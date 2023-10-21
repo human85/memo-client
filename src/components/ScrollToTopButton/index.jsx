@@ -28,8 +28,12 @@ function ScrollToTopButton({ color, fontSize }) {
   }, [])
 
   return (
-    <button className={isVisible ? 'scroll-to-top visible' : 'scroll-to-top'} onClick={scrollToTop}>
-      <UpOutline color={color} fontSize={fontSize} />
+    <button
+      style={{ backgroundColor: color }}
+      className={isVisible ? 'scroll-to-top visible' : 'scroll-to-top'}
+      onClick={scrollToTop}
+    >
+      <UpOutline color="#fff" fontSize={fontSize} />
     </button>
   )
 }

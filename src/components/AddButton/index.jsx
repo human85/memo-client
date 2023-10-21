@@ -3,8 +3,8 @@ import './index.scss'
 
 function AddButton({ color, fontSize, onClick }) {
   return (
-    <button className="add" onClick={onClick}>
-      <AddOutline color={color} fontSize={fontSize} />
+    <button className="add" style={{ backgroundColor: color }} onClick={onClick}>
+      <AddOutline fontSize={fontSize} color="#fff" />
     </button>
   )
 }

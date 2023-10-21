@@ -1,0 +1,26 @@
+.adm-swipe-action {
+  margin-bottom: 10px;
+}
+
+.todo-item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 0.6em 1em;
+  border-radius: 10px;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: 7px -4px 15px -3px rgba(239, 237, 237, 0.658);
+
+  .title {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.4em;
+
+    &.completed {
+      text-decoration: line-through;
+      color: gray;
+      font-style: italic;
+    }
+  }
+}
