@@ -11,7 +11,6 @@ function MemoItem({ id, title, content, date, refetchMemos }) {
       key: 'delete',
       text: '删除',
       color: 'danger',
-      // TODO: 删除的逻辑
       onClick: async () => {
         await deleteMemoApi(id)
         refetchMemos()

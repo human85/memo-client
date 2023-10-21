@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 /** @description 获取 memos */
 export function getMemosApi() {
-  return request.get()
+  return request.get('/memos')
 }
 
 /**
@@ -10,7 +10,7 @@ export function getMemosApi() {
  * @param {number} id memo id
  */
 export function deleteMemoApi(id) {
-  return request.delete('/' + id)
+  return request.delete('/memos/' + id)
 }
 
 /**
@@ -18,17 +18,18 @@ export function deleteMemoApi(id) {
  * @param {number} id memo id
  */
 export function getMemoByIdApi(id) {
-  return request.get('/' + id)
+  return request.get('/memos/' + id)
 }
 
 /**
  * @description 修改或新增 memo
  * @param {number} id memo id
+ * @param {object} data
  */
 export function patchOrPostMemoApi(id, data) {
   if (id) {
-    return request.patch('/' + id, data)
+    return request.patch('/memos/' + id, data)
   } else {
-    return request.post('', data)
+    return request.post('/memos', data)
   }
 }

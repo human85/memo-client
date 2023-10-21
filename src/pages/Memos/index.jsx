@@ -1,5 +1,4 @@
 import MemoItem from './MemoItem'
-import './index.scss'
 import AddButton from '@/components/AddButton'
 import ScrollToTopButton from '@/components/ScrollToTopButton'
 import { getMemosApi } from '@/api/memos'
@@ -39,10 +38,10 @@ function Memos() {
       </ul>
 
       {/* 回到顶部按钮 */}
-      <ScrollToTopButton color="#fff" fontSize={30} />
+      <ScrollToTopButton color="#1677ff" fontSize={30} />
 
       {/* 新增按钮 */}
-      <AddButton color="#fff" fontSize={30} onClick={() => navigate('/memo')} />
+      <AddButton color="#1677ff" fontSize={30} onClick={() => navigate('/memo')} />
     </div>
   )
 }
