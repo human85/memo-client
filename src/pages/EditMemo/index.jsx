@@ -77,6 +77,7 @@ export function Component() {
             setTips('请保存❌')
           }}
           autoSize={true}
+          showCount={number => <span className="number-count">{number} 字</span>}
         />
       </div>
     </>

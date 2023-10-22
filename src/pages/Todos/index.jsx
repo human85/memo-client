@@ -87,15 +87,20 @@ export function Component() {
       if (!id) return // 新增时无需执行后续逻辑
       setCurrentId(id)
     })
+
     textAreaRef.current.focus() // 文本域获取焦点
+
+    if (!id) return // 新增时无需执行后续逻辑
     setText(todos.find(todo => todo.id === id).title) // 放在文本域获取焦点之后防止首次加载光标出现在文字之前
   }
-  console.log(123)
+
   // 完成编辑 todo
   async function doneEdit() {
     // 修改时内容为空走删除逻辑
-    if (currentId && !text) {
-      await removeTodo(currentId)
+    if (!text) {
+      if (currentId) {
+        await removeTodo(currentId)
+      }
       setCurrentId(null) // 重置当前编辑的 todo id
       setPopupVisible(false) // 关闭弹出层
       return
